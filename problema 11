@@ -1,0 +1,18 @@
+int Fuerza = 0;
+            float Longitud = 0;
+            float Momento = 0;
+            double Angulo = 0;
+            double Radianes = 0;
+            double seno = 0;
+
+            Fuerza = int.Parse(txtFuerza.Text);
+            Longitud = float.Parse(txtLongitud.Text);
+            Angulo = 90 - (double.Parse(txtAngulo.Text));
+
+            Radianes = (Angulo * Math.PI) / 180;
+            lblRadianes.Text = Radianes.ToString();
+            seno = Math.Sin(Radianes);
+
+            Momento = (Convert.ToSingle(Fuerza) * Longitud * Convert.ToSingle(seno));
+            
+            txtMomento.Text = Momento.ToString();
